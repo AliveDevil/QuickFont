@@ -17,7 +17,7 @@ namespace QuickFont
 		/// <summary>
 		/// The font colour
 		/// </summary>
-		public Color4 Colour = Color.FromArgb(255, 255, 255, 255);
+		public Color4 Color = System.Drawing.Color.FromArgb(255, 255, 255, 255);
 		/// <summary>
 		/// Whether to draw a drop-shadow. Note: this requires
 		/// the QFont to have been loaded with a drop shadow to
@@ -206,7 +206,7 @@ namespace QuickFont
 		{
 			var clone = new QFontRenderOptions();
 
-			clone.Colour = Colour;
+			clone.Color = Color;
 			clone.CharacterSpacing = CharacterSpacing;
 			clone.WordSpacing = WordSpacing;
 			clone.LineSpacing = LineSpacing;

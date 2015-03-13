@@ -516,7 +516,7 @@ namespace QuickFont
 			}
 			else
 			{
-				GL.Color4(Options.Colour);
+				GL.Color4(Options.Color);
 			}
 
 			TexturePage sheet = fontData.Pages[glyph.page];
