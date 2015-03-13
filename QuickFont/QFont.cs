@@ -268,11 +268,18 @@ namespace QuickFont
 		public static void Begin()
 		{
 			ProjectionStack.Begin();
+
+			GL.Disable(EnableCap.Lighting);
+			GL.Enable(EnableCap.ColorMaterial);
+			GL.Disable(EnableCap.DepthTest);
 		}
 
 		public static void End()
 		{
 			ProjectionStack.End();
+
+			GL.Disable(EnableCap.ColorMaterial);
+			GL.Disable(EnableCap.Blend);
 		}
 
 		/// <summary>
