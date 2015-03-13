@@ -1,24 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace QuickFont
+﻿namespace QuickFont
 {
-    /// <summary>
-    /// The configuraiton used when loading a font from a qfont file.
-    /// </summary>
-    public class QFontLoaderConfiguration : QFontConfiguration
-    {
+	/// <summary>
+	/// The configuraiton used when loading a font from a qfont file.
+	/// </summary>
+	public class QFontLoaderConfiguration : QFontConfiguration
+	{
+		public QFontLoaderConfiguration()
+		{
+		}
 
-        public QFontLoaderConfiguration() { }
-        public QFontLoaderConfiguration(bool addDropShadow) : this(addDropShadow, false) { }
-        public QFontLoaderConfiguration(bool addDropShadow, bool TransformToOrthogProjection)
-        {
-            if (addDropShadow)
-                this.ShadowConfig = new QFontShadowConfiguration();
+		public QFontLoaderConfiguration(bool addDropShadow)
+			: this(addDropShadow, false)
+		{
+		}
 
-            this.TransformToCurrentOrthogProjection = TransformToOrthogProjection;
-        }
+		public QFontLoaderConfiguration(bool addDropShadow, bool TransformToOrthogProjection)
+		{
+			if (addDropShadow)
+				this.ShadowConfig = new QFontShadowConfiguration();
 
-    }
+			this.TransformToCurrentOrthogProjection = TransformToOrthogProjection;
+		}
+	}
 }
